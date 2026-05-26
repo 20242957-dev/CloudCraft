@@ -10,7 +10,7 @@
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Eaglercraft 1.12" />
 		<meta property="og:description" content="test directory HTML page" />
-		<link type="image/png" rel="shortcut icon" href="favicon.png" />
+		<link type="image/png" rel="shortcut icon" href="hyper.png" />
 		<script type="text/javascript" src="ModAPI.js"></script>
                 <script type="text/javascript" src="ModLoader.js"></script>
 		<script type="text/javascript" src="ModGUI.js"></script>
@@ -31,7 +31,7 @@
 						worldsDB: "worlds",
 						logInvalidCerts: true,
 						servers: [
-							{ addr: "ws://Hypermc.KL/", name: "HyperMc" }
+							{ addr: "ws://Hypermc.hub/", name: "HyperMc" }
 						],
 						relays: [
 							{ addr: "wss://relay.deev.is/", comment: "lax1dude relay #1", primary: relayId == 0 },
@@ -133,4 +133,93 @@ document.getElementById("hyperloader").style.display = "none";
 
 });
 
-</script></body>
+</script></body><canvas<img src="hyper.png" id="hyperl">
+
+<style>
+
+#hyper.png{
+position:fixed;
+top:10px;
+left:50%;
+transform:translateX(-50%);
+width:520px;
+z-index:9999;
+pointer-events:none;
+
+filter:
+drop-shadow(0 0 15px #00e5ff)
+drop-shadow(0 0 40px #00e5ff);
+
+animation:hyperfloat 3s ease-in-out infinite;
+}
+
+@keyframes hyperfloat{
+0%{transform:translateX(-50%) translateY(0px);}
+50%{transform:translateX(-50%) translateY(-6px);}
+100%{transform:translateX(-50%) translateY(0px);}
+}
+
+</style><style>
+
+button{
+background:#1f002b !important;
+border:2px solid #a855f7 !important;
+color:white !important;
+
+box-shadow:
+0 0 10px #a855f7,
+0 0 20px #a855f7;
+
+transition:0.2s;
+}
+
+button:hover{
+background:#4c1d95 !important;
+
+transform:scale(1.05);
+
+box-shadow:
+0 0 15px #c084fc,
+0 0 35px #c084fc;
+}
+
+</style><a href="https://discord.gg/https://discord.gg/taT67bjUT"
+target="_blank"
+id="discordbtn">
+DISCORD
+</a>
+
+<style>
+
+#discordbtn{
+position:fixed;
+bottom:20px;
+right:20px;
+
+background:#5865F2;
+color:white;
+
+padding:12px 20px;
+border-radius:12px;
+
+font-family:Arial;
+font-weight:bold;
+text-decoration:none;
+
+z-index:9999;
+
+box-shadow:
+0 0 10px #5865F2,
+0 0 25px #5865F2;
+
+transition:0.2s;
+}
+
+#discordbtn:hover{
+transform:scale(1.08);
+box-shadow:
+0 0 20px #7289da,
+0 0 40px #7289da;
+}
+
+</style></body>
