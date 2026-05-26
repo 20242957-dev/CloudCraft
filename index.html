@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Eaglercraft 1.12 test directory HTML page" />
+		<meta name="keywords" content="eaglercraft, eaglercraftx, minecraft, 1.12, 1.12.2" />
+		<title>Hyperclient_1.2.2</title>
+		<meta property="og:locale" content="en-es" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Eaglercraft 1.12" />
+		<meta property="og:description" content="test directory HTML page" />
+		<link type="image/png" rel="shortcut icon" href="favicon.png" />
+		<script type="text/javascript" src="ModAPI.js"></script>
+                <script type="text/javascript" src="ModLoader.js"></script>
+		<script type="text/javascript" src="ModGUI.js"></script>
+		<script type="text/javascript" src="anvil.js"></script>
+		<script type="text/javascript" src="classes.js"></script>
+		<script type="text/javascript">
+			"use strict";
+			window.addEventListener("load", () => {
+				if(document.location.href.startsWith("file:")) {
+					alert("HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP");
+				}else {
+					const relayId = Math.floor(Math.random() * 3);
+					window.eaglercraftXOpts = {
+						demoMode: false,
+						container: "game_frame",
+						assetsURI: "assets.epk",
+						localesURI: "lang/",
+						worldsDB: "worlds",
+						logInvalidCerts: true,
+						servers: [
+							{ addr: "ws://Hypermc.KL/", name: "HyperMc" }
+						],
+						relays: [
+							{ addr: "wss://relay.deev.is/", comment: "lax1dude relay #1", primary: relayId == 0 },
+							{ addr: "wss://relay.lax1dude.net/", comment: "lax1dude relay #2", primary: relayId == 1 },
+							{ addr: "wss://relay.shhnowisnottheti.me/", comment: "ayunami relay #1", primary: relayId == 2 }
+						]
+					};
+					
+					var q = window.location.search;
+					if(typeof q === "string" && q.startsWith("?")) {
+						q = new URLSearchParams(q);
+						var s = q.get("server");
+						if(s) window.eaglercraftXOpts.joinServer = s;
+					}
+					
+					main();
+				}
+			});
+		</script>
+	</head>
+	<body style="margin:0px;width:100vw;height:100vh;overflow:hidden;" id="game_frame">
+	</body><div style="
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:180px;
+background:linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0));
+z-index:998;
+"></div>
+</div><body style="
+background-image:url('hyper.png');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+overflow:hidden;
+"><body><body><div id="hyperloader">
+
+<img src="hyper.png" id="hyperloadinglogo">
+
+<div id="loadingtext">
+LOADING HYPER CLIENT...
+</div>
+
+</div>
+
+<style>
+
+#hyperloader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:999999;
+}
+
+#hyperloadinglogo{
+width:600px;
+
+filter:
+drop-shadow(0 0 20px #00e5ff)
+drop-shadow(0 0 50px #00e5ff);
+
+animation:hyperfloat 3s ease-in-out infinite;
+}
+
+#loadingtext{
+margin-top:20px;
+font-size:30px;
+font-family:Arial;
+color:#00e5ff;
+
+text-shadow:
+0 0 10px #00e5ff,
+0 0 30px #00e5ff;
+}
+
+@keyframes hyperfloat{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0px);}
+}
+
+</style><script>
+
+window.addEventListener("load", function(){
+
+setTimeout(() => {
+
+document.getElementById("hyperloader").style.display = "none";
+
+}, 4000);
+
+});
+
+</script></body>
